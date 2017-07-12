@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="js/jquery.sliphover.min.js"></script>
+    <title>sliphover-jquery</title>
+</head>
+<style>
+    body{
+        /*background-color: #252525;*/
+    }
+
+</style>
+<body>
+<div id="container">
+    <div class="row">
+        <div class="col-sm-4"><a href="http://www.baidu.com">
+            <img class="img img-responsive" src="img/1.jpg" title="我是标题，再说一遍，我是标题" >
+        </a></div>
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-12"><a href="#">
+                    <img class="img img-responsive" src="img/2.jpg" title="我是标题，再说一遍，我是标题">
+                </a></div>
+                <div class="col-sm-12" style="margin-top: 70px"><a href="#">
+                    <img class="img img-responsive" src="img/2.jpg" title="我是标题，再说一遍，我是标题">
+                </a></div>
+            </div>
+        </div>
+        <div class="col-sm-4"><a href="#">
+            <img class="img img-responsive" src="img/3.jpg" title="我是标题，再说一遍，我是标题">
+        </a>
+        </div>
+    </div>
+    <div class="container" style="margin-top:45px">
+        <p style="text-align: center;font-weight: 400;font-size: 20px;margin-bottom: 20px">sliphover参数表（js初始化处）</p>
+        <div class="col-sm-9 col-sm-offset-2">
+            <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>属性/方法</th>
+                        <th width="50px">类型</th>
+                        <th>默认值</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>字符串</td>
+                        <td>100%</td>
+                        <td>遮罩的高度</td>
+                    </tr>
+                    <tr>
+                        <td>target</td>
+                        <td>字符串</td>
+                        <td>img</td>
+                        <td>将要被遮罩的元素</td>
+                    </tr>
+                    <tr>
+                        <td>caption</td>
+                        <td>字符串</td>
+                        <td>title</td>
+                        <td>将要被显示成标题或描述的属性，可以使用 HTML data 自定义属性 data-caption</td>
+                    </tr>
+                    <tr>
+                        <td>duration</td>
+                        <td>字符串/整数</td>
+                        <td><br></td>
+                        <td>动画持续时间，以毫秒为单位，越大越慢</td>
+                    </tr>
+                    <tr>
+                        <td>fontColor</td>
+                        <td>字符串</td>
+                        <td>#fff</td>
+                        <td>字体颜色</td>
+                    </tr>
+                    <tr>
+                        <td>backgroundColor</td>
+                        <td>字符串</td>
+                        <td>rgba(0,0,0,.7)</td>
+                        <td>背景颜色</td>
+                    </tr>
+                    <tr>
+                        <td>reverse</td>
+                        <td>布尔值</td>
+                        <td>false</td>
+                        <td>反向动画</td>
+                    </tr>
+                    <tr>
+                        <td>textAlign</td>
+                        <td>字符串</td>
+                        <td>center</td>
+                        <td>文字水平位置，可选 left、center、right</td>
+                    </tr>
+                    <tr>
+                        <td>verticalMiddle</td>
+                        <td>布尔值</td>
+                        <td>true</td>
+                        <td>文字垂直居中</td>
+                    </tr>
+                    <tr>
+                        <td>withLink</td>
+                        <td>布尔值</td>
+                        <td>true</td>
+                        <td>禁用图片链接，使其不可点</td>
+                    </tr>
+                    </thead>
+                </table>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('#container').sliphover( {
+                'height':'20%',//支持百分比
+//                'target':,
+                'duration':200,
+//                'fontColor':'rgba(255,255,255,0.3)'
+//                'withLink':false,
+                    'reverse':true,
+            });
+        });
+    </script>
+</body>
+
+</html>
